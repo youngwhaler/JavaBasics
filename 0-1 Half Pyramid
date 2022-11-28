@@ -1,0 +1,40 @@
+import java.util.*;
+
+public class JavaBasics{
+    public static void main(String args[]){
+      /*print:
+       * 1
+       * 01
+       * 101
+       * 0101
+       * 10101
+       * ... (and so on)
+       */
+      Scanner sc = new Scanner(System.in);
+      System.out.print("enter your number: ");
+      int n = sc.nextInt();
+      int a = 1;
+      for(int line = 1; line<=n; line++){
+        for(int counter = 1; counter<=line; counter++){
+          if(line%2==0){
+            if(counter%2!=0){
+              System.out.print((a-1));
+            }else{
+              System.out.print(a);
+            }
+           
+          } else{
+            if(counter%2!=0){
+            System.out.print(a);
+          } else{
+            System.out.print((a-1));
+          }
+            
+          }
+        } 
+        System.out.println();
+      }
+     
+   }
+  
+  }
