@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class JavaBasics{
+
+//function to convert bin to dec
+public static int binToDec(int binNum){
+    int pow = 0;
+    int decNum = 0;
+    
+    while(binNum>0){
+      int lastDigit = binNum%10;
+      decNum += lastDigit*(int) (Math.pow(2,pow));
+      pow++;
+      binNum /= 10;
+    }
+    return decNum;
+  }
+
+
+
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("enter your binary number: ");
+    int n = sc.nextInt();
+    System.out.println("decimal of " + n + " = " + binToDec(n));
+    
+  }
+  }
