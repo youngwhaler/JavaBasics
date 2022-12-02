@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class JavaBasics{
+
+//to compute the average of three numbers
+  public static float avgOf3(float a, float b, float c){
+    return ((a+b+c)/3);
+  }
+
+
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.println("enter 3 numbers: ");
+    float n = sc.nextFloat();
+    float m = sc.nextFloat();
+    float o = sc.nextFloat();
+    System.out.println(avgOf3(n,m,o));
+    
+  }
+  
+  }
