@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class JavaBasics{
+
+// convert decimal number to binary number
+  public static int DecToBin(int n){
+    int pow = 0;
+    int decNum = 0;
+
+    while(n>0){
+      int rem = n%2;
+      decNum += (rem*(int) Math.pow(10,pow));
+      pow++;
+      n /= 2;
+    }
+    return decNum;
+  }
+
+
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    System.out.print("enter your decimal number: ");
+    int n = sc.nextInt();
+    System.out.println("binary form of " + n + " = " + DecToBin(n));
+    
+  }
+  
+  }
